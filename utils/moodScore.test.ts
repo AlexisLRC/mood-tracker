@@ -10,7 +10,7 @@ describe('calculateMoodAverage', () => {
     expect(result).toBe(3.5)
   })
   test('retourne 0 pour un tableau vide', () => {
-    expect(calculateMoodAverage([])).toBe(99) // valeur fausse volontairement
+    expect(calculateMoodAverage([])).toBe(0)
   })
   test('gere un seul score', () => {
     // TODO: completer ce test
