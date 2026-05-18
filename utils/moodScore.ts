@@ -15,7 +15,7 @@ export function getMoodLabel(average: number): string {
 }
 
 // Verifie si la streak est active (entree dans les 24 dernieres heures)
-export function isStreakActive(lastEntryDate: Date): boolean { 
+export function isStreakActive(lastEntryDate: Date): boolean {
   const now = new Date()
   const diffMs = now.getTime() - lastEntryDate.getTime()
   const diffHours = diffMs / (1000 * 60 * 60)
@@ -41,10 +41,10 @@ export function getWeeklyTrend(
 
   // - difference > 0.5 → 'improving'
   if (difference > 0.5) return 'improving'
-  
+
   // - difference < -0.5 → 'declining'
   if (difference < -0.5) return 'declining'
-  
+
   // - sinon → 'stable'
   return 'stable'
 }
